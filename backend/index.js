@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const router = require("./routes/router");
+const router = require("./router/router");
 
 app.use(cors());
 app.use(express.json());
-app.use("/new", router);
+app.post("/new", router);
 
-app.listen(3000, () => {
+app.listen(7777, () => {
   console.log("server connect");
 });
